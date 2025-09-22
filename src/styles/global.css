@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Figtree", sans-serif; */
+    font-family: "Roboto", sans-serif;
+
+    scrollbar-width: thin;
+    /* scrollbar-color: #1976d2 #f9f9f9; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide number input spinners in Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
