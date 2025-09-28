@@ -42,6 +42,7 @@ interface NestedDropdownProps {
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
     // marginTop: theme.spacing(1),
+    // marginLeft: theme.spacing(2),
     padding: theme.spacing(0.8),
     borderRadius: 10,
     border: `1px solid ${theme.palette.grey[200]}`,
@@ -162,7 +163,7 @@ const NestedDropdown: React.FC<NestedDropdownProps> = ({ menuItems, children }) 
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <StyledPaper elevation={3}>
+                                <StyledPaper elevation={3} sx={{ ml: 2 }}>
                                     {renderMenu(item.children!, [...parentKeys, item.key])}
                                 </StyledPaper>
                             </Popper>
