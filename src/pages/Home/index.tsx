@@ -6,10 +6,11 @@ const Home = () => {
   return (
     <Box sx={{ fontFamily: "Roboto, sans-serif" }}>
       {/* Navbar */}
-      <AppBar position="static" color="transparent" sx={{ boxShadow: "none", py: 1 }}>
-        <Toolbar sx={{ justifyContent: "space-between" }}>
+      <AppBar position="static" color="transparent" sx={{ boxShadow: "none",}}>
+        <Toolbar sx={{ justifyContent: "space-between", minHeight: 'auto', }}>
           <Stack direction="row" alignItems="center" spacing={1}>
-            <SiMui size={32} color="#1976d2" />
+            {/* <SiMui size={32} color="#1976d2" /> */}
+            <Box width={40} component={'img'} src={'/logo.svg'} />
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               FlexiMUI
             </Typography>

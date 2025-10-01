@@ -14,7 +14,7 @@ const Header: React.FC = () => {
             <Toolbar
                 sx={{
                     display: "flex",
-                    justifyContent: "space-between",
+                    // justifyContent: "space-between",
                     alignItems: "center",
                     gap: 2,
                 }}
@@ -36,19 +36,19 @@ const Header: React.FC = () => {
                 </Stack>
 
                 {/* Middle - Menu (takes remaining space) */}
-                <Box sx={{ flex: 1, display: "flex", justifyContent: "center", minWidth: 0 }}>
+                {/* <Box > */}
                     <HorizontalMenu />
-                </Box>
+                {/* </Box> */}
 
                 {/* Right side - Actions */}
-                <Box sx={{ flexShrink: 0, display: "flex", gap: 1 }}>
+                {/* <Box sx={{ flexShrink: 0, display: "flex", gap: 1 }}>
                     <Button color="inherit" startIcon={<RiLoginBoxLine />}>
                         Login
                     </Button>
                     <Button color="inherit" startIcon={<RiUserAddLine />}>
                         Signup
                     </Button>
-                </Box>
+                </Box> */}
             </Toolbar>
         </AppBar>
     );
