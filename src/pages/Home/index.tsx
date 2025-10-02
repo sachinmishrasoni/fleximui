@@ -1,32 +1,15 @@
-import { Box, Typography, Button, Stack, Container, AppBar, Toolbar, IconButton, Paper } from "@mui/material";
-import { FaRocket, FaPalette, FaRecycle, FaGithub, FaBook } from "react-icons/fa";
-import { SiMui } from "react-icons/si";
+import { Box, Typography, Stack, Container, Paper } from "@mui/material";
+import { FaRocket, FaPalette, FaRecycle } from "react-icons/fa";
+import Hero from "./Hero";
+import Features from "./Features";
 
 const Home = () => {
   return (
     <Box sx={{ fontFamily: "Roboto, sans-serif" }}>
-      {/* Navbar */}
-      <AppBar position="static" color="transparent" sx={{ boxShadow: "none",}}>
-        <Toolbar sx={{ justifyContent: "space-between", minHeight: 'auto', }}>
-          <Stack direction="row" alignItems="center" spacing={1}>
-            {/* <SiMui size={32} color="#1976d2" /> */}
-            <Box width={40} component={'img'} src={'/logo.svg'} />
-            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-              FlexiMUI
-            </Typography>
-          </Stack>
-          <Stack direction="row" spacing={2}>
-            <Button color="primary" startIcon={<FaBook />}>Docs</Button>
-            <Button color="primary" startIcon={<FaPalette />}>Components</Button>
-            <IconButton color="primary" href="https://github.com" target="_blank">
-              <FaGithub />
-            </IconButton>
-          </Stack>
-        </Toolbar>
-      </AppBar>
+
 
       {/* Hero Section */}
-      <Box
+      {/* <Box
         sx={{
           minHeight: "70vh",
           display: "flex",
@@ -53,7 +36,9 @@ const Home = () => {
             View Components
           </Button>
         </Stack>
-      </Box>
+      </Box> */}
+      <Hero />
+      <Features />
 
       {/* Features Section */}
       <Container maxWidth="lg" sx={{ mt: 12 }}>
@@ -79,13 +64,6 @@ const Home = () => {
           ))}
         </Stack>
       </Container>
-
-      {/* Footer */}
-      <Box sx={{ mt: 12, py: 4, bgcolor: "#f5f5f5", textAlign: "center" }}>
-        <Typography variant="body2" color="text.secondary">
-          © {new Date().getFullYear()} FlexiMUI. All rights reserved.
-        </Typography>
-      </Box>
     </Box>
   );
 };
