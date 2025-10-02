@@ -5,12 +5,20 @@ import { CgMenuLeft } from "react-icons/cg";
 import { FiSettings } from "react-icons/fi";
 import { FaGithubAlt } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '@/store/hooks';
+import { toggleSettingsDrawer } from '@/store/features/common/common.slice';
 
 interface HeaderProps {
     toggleDrawer?: () => void;
 }
 const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
+
+    const handleSettingBtn = () => {
+        dispatch(toggleSettingsDrawer());
+    };
+
     return (
         <AppBar position="sticky"
             sx={{
@@ -65,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
                         <IconButton color='primary'>
                             <FaGithubAlt size={20} />
                         </IconButton>
-                        <IconButton color='primary'>
+                        <IconButton color='primary' onClick={handleSettingBtn}>
                             <FiSettings size={20} />
                         </IconButton>
                     </Stack>

@@ -9,7 +9,7 @@ declare module '@mui/material/styles' {
 const themeObj: Record<"dark" | "light", Partial<PaletteOptions>> = {
     dark: {
         primary: {
-            main: "#1976d2",
+            main: "#33A1E0",
         },
         background: {
             default: "#222831",
@@ -18,7 +18,7 @@ const themeObj: Record<"dark" | "light", Partial<PaletteOptions>> = {
     },
     light: {
         primary: {
-            main: "#1976d2",
+            main: "#33A1E0",
         },
         text: {
             primary: "#021526",

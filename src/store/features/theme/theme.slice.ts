@@ -1,15 +1,15 @@
-import type { PaletteMode } from "@mui/material";
-import { createSlice } from "@reduxjs/toolkit";
+// import type { PaletteMode } from "@mui/material";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 interface ThemeState {
-    mode: 'light' | 'dark';
+    mode: 'light' | 'dark' | 'system';
     direction: 'ltr' | 'rtl';
 }
 
-const localMode = localStorage.getItem('mode') || 'dark';
-const isValidMode = (mode: string | null): mode is PaletteMode =>
-    mode === 'light' || mode === 'dark';
-const mode: PaletteMode = isValidMode(localMode) ? localMode : 'dark';
+const localMode = localStorage.getItem('mode') || 'system';
+const isValidMode = (mode: string | null): mode is ThemeState['mode'] =>
+    mode === 'light' || mode === 'dark' || mode === 'system';
+const mode: ThemeState['mode'] = isValidMode(localMode) ? localMode : 'system';
 
 const initialState: ThemeState = {
     mode,
@@ -20,6 +20,10 @@ const themeSlice = createSlice({
     name: 'theme',
     initialState,
     reducers: {
+        setMode: (state, action: PayloadAction<ThemeState['mode']>) => {
+            state.mode = action.payload;
+            localStorage.setItem('mode', state.mode);
+        },
         toggleMode: (state) => {
             state.mode = state.mode === 'light' ? 'dark' : 'light';
             localStorage.setItem('mode', state.mode);
@@ -30,6 +34,6 @@ const themeSlice = createSlice({
     },
 });
 
-export const { toggleMode, toggleDirection } = themeSlice.actions;
+export const { setMode, toggleMode, toggleDirection } = themeSlice.actions;
 
 export default themeSlice.reducer;

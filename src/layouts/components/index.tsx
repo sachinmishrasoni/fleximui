@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../common/Footer';
 import { Box, Container } from '@mui/material';
 import Sidebar from './Sidebar';
+import SettingsDrawer from '../common/SettingsDrawer';
 
 const ComponentsLayout: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -37,6 +38,8 @@ const ComponentsLayout: React.FC = () => {
                     <Footer />
                 </Box>
             </Box>
+
+            <SettingsDrawer />
         </Box>
     )
 }
