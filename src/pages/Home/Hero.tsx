@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         flexDirection: "column",
         justifyContent: "center",
         px: 2,
-        backgroundImage: theme => `linear-gradient(to bottom right, transparent 30%, ${alpha(theme.palette.primary.main, 0.2)} 100%)`,
+        backgroundImage: theme => `linear-gradient(to top left, transparent 30%, ${alpha(theme.palette.primary.main, 0.2)} 100%)`,
       }}
     >
       <Container sx={{

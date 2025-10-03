@@ -66,7 +66,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
             <Stack direction="row" alignItems={"center"} justifyContent="space-between" py={1} px={2} 
             sx={{
                 backgroundColor: theme => alpha(theme.palette.background.paper, 0.1),
-                color: theme => theme.palette.primary.contrastText
+                color: theme => theme.palette.common.white
             }}
             >
                 <Typography variant="body1">{fileName}</Typography>

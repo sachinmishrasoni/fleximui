@@ -24,12 +24,12 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
             sx={{
                 height: '60px !important',
                 boxShadow: "none",
-                // backgroundColor: theme => theme.palette.mode === "light"
-                //     ? alpha(theme.palette.common.black, 0.4)
-                //     : alpha(theme.palette.primary.main, 0.2),
-                backgroundColor: theme => alpha(theme.palette.primary.main, 0.2),
+                backgroundColor: theme => theme.palette.mode === "light"
+                    ? alpha(theme.palette.background.default, 0.4)
+                    : alpha(theme.palette.background.default, 0.8),
+                // backgroundColor: theme => alpha(theme.palette.primary.main, 0.2),
                 color: theme => theme.palette.primary.contrastText,
-                backdropFilter: "blur(10px)",
+                backdropFilter: "blur(15px)",
                 borderBottom: `1px solid`,
                 borderColor: theme => alpha(theme.palette.primary.main, 0.3),
             }}

@@ -21,8 +21,8 @@ const themeObj: Record<"dark" | "light", Partial<PaletteOptions>> = {
             main: "#33A1E0",
         },
         text: {
-            primary: "#021526",
-            // secondary: "#DDDDDD",
+            primary: "#222831",
+            secondary: "#7A7A73",
         }
 
     }

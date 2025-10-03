@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
 
 const Features: React.FC = () => {
@@ -6,14 +6,20 @@ const Features: React.FC = () => {
         <Box component={"section"}
             sx={{
                 minHeight: "calc(100vh - 60px)",
-                // display: "flex",
-                // flexDirection: "column",
-                // justifyContent: "center",
                 px: 2,
-                // backgroundImage: theme => `linear-gradient(to top right, ${alpha(theme.palette.common.white, 0.2)} 30%, ${alpha(theme.palette.primary.main, 0.2)} 100%)`,
+                py: 5
             }}
         >
-            skldf
+            <Container sx={{
+                textAlign: "center",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+            }}>
+                <Typography variant="h3" fontWeight={600}>Features</Typography>
+                <Typography variant="body1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa facere dignissimos consequatur porro maxime? Ab aspernatur earum ad doloremque praesentium.</Typography>
+            </Container>
         </Box>
     )
 }
