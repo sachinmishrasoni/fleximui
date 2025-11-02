@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
     return (
         <AppBar position="sticky"
             sx={{
-                height: '60px !important',
+                // height: '60px !important',
                 boxShadow: "none",
                 backgroundColor: theme => theme.palette.mode === "light"
                     ? alpha(theme.palette.background.default, 0.4)
@@ -35,6 +35,9 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
             }}
         >
             <Toolbar sx={{
+                minHeight: '50px !important',
+                py: 1.5,
+                alignItems: 'center',
                 justifyContent: "space-between",
                 // minHeight: 'auto',
             }}>

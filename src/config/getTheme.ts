@@ -46,6 +46,7 @@ const getTheme = (mode: "dark" | "light") => createTheme({
     },
     typography: {
         fontFamily: ['Poppins', 'sans-serif'].join(','),
+        // fontSize: 14,
     },
     components: {
         MuiButton: {
